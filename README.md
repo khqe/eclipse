@@ -111,7 +111,7 @@ bitz collect --cores 8
 ---
 
 ### Usefull Commands
-* You have to enter them out of the screen
+* You have to enter these out of the screen session
 
 **Check account info:**
 ```bash
