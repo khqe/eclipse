@@ -103,4 +103,22 @@ bitz collect --cores 8
 * screen lists: `screen -ls`
 * terminate and kill screen: `screen -XS bitz quit` (if you had multiple screens in list, replace `bitz` with `id` of screen.
 
-### C. Start Miner
+---
+
+### Usefull Commands
+* You have to enter them out of the screen
+
+Check account info:
+```bash
+bitz account
+```
+
+Claim Bitz:
+```bash
+bitz claim
+```
+
+All Commands List
+```bash
+bitz -h
+```
