@@ -118,7 +118,7 @@ bitz collect --cores 8
 bitz account
 ```
 
-**Claim Bitz:**
+**Claim Bitz to your Node Wallet:**
 ```bash
 bitz claim
 ```
