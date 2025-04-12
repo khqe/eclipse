@@ -103,6 +103,7 @@ bitz collect --cores 8
 ```
 * minimize screen: `Ctrl+A+D`
 * return screen: `screen -r bitz`
+* stop the node while in screen: `Ctrl+C`
 * screen lists: `screen -ls`
 * terminate and kill screen: `screen -XS bitz quit` (if you had multiple screens in list, replace `bitz` with `id` of screen.
 
