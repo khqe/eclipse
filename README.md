@@ -6,11 +6,15 @@
 - NOT pre-mined + ZERO team/insider allocations.
 - Token address: https://eclipsescan.xyz/token/64mggk2nXg6vHC1qCdsZdEFzd5QGN4id54Vbho4PswCF
 
+---
+
 # Setup Guide
 ## Presequities
 - Eclipse wallet (.eg `Backpack`) funded with ETH
 - Linux Ubuntu Terminal
 - Windows users: Must install Linux Ubuntu Terminal using WSL. **[Guide](https://github.com/0xmoei/Install-Linux-on-Windows)**
+
+---
 
 ## Install Dependecies
 **1. Install Packages**
@@ -40,6 +44,8 @@ solana version
 solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
 ```
 
+---
+
 ## Wallet CLI
 ### 1. Create a CLI wallet
 ```bash
@@ -67,9 +73,34 @@ cat ~/.config/solana/id.json
 * Import `Private-Key` into your `Backpack` wallet.
 * Fund it with `ETH` on `Eclipse` Network
 
+---
+
 ## Install Bitz
 ```bash
 cargo install bitz
 ```
 
-## ## Install Bitz
+---
+
+## Run Bitz Miner
+### 1. Open a screen
+By opening a screen, you can run any process in the background, so it won't get terminated if you closed your VPS. (Windows users must keep their terminal open)
+```bash
+screen -S bitz
+```
+
+### 2. Start Miner
+```bash
+bitz collect
+```
+* Your Miner Node is Running successfully now.
+* You can set the CPU cores for your Bitz miner. Stop the node with `Ctrl+C`, then replace your `cores` with `8` and enter the following command:
+```bash
+bitz collect --cores 8
+```
+* minimize screen: `Ctrl+A+D`
+* return screen: `screen -r bitz`
+* screen lists: `screen -ls`
+* terminate and kill screen: `screen -XS bitz quit` (if you had multiple screens in list, replace `bitz` with `id` of screen.
+
+### C. Start Miner
