@@ -13,7 +13,13 @@
 - Windows users: Must install Linux Ubuntu Terminal using WSL. **[Guide](https://github.com/0xmoei/Install-Linux-on-Windows)**
 
 ## Install Dependecies
-1. Install Rust
+**1. Install Packages**
+```bash
+sudo apt-get update && sudo apt-get upgrade -y
+
+sudo apt install screen curl nano  -y
+```
+**2. Install Rust**
 ```bash
  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -21,12 +27,17 @@
 ```bash
 source $HOME/.cargo/env
 ```
-2. Install Solana CLI:
+**3. Install Solana CLI:**
 ```bash
 curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
 ```
+* Close and reopen your Terminal.
 ```
 solana version
+```
+**4. Switch RPC**
+```bash
+solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
 ```
 
 ## Wallet CLI
@@ -56,4 +67,9 @@ cat ~/.config/solana/id.json
 * Import `Private-Key` into your `Backpack` wallet.
 * Fund it with `ETH` on `Eclipse` Network
 
-## Install 
+## Install Bitz
+```bash
+cargo install bitz
+```
+
+## ## Install Bitz
