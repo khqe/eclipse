@@ -108,17 +108,17 @@ bitz collect --cores 8
 ### Usefull Commands
 * You have to enter them out of the screen
 
-Check account info:
+**Check account info:**
 ```bash
 bitz account
 ```
 
-Claim Bitz:
+**Claim Bitz:**
 ```bash
 bitz claim
 ```
 
-All Commands List
+**All Commands List:**
 ```bash
 bitz -h
 ```
