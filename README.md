@@ -29,30 +29,31 @@ curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev 
 solana version
 ```
 
-## Create CLI wallet
+## Wallet CLI
+### 1. Create a CLI wallet
 ```bash
 solana-keygen new
 ```
 * Set a password or skip by pressing `Enter`.
 * Save your Seed-Phrase & Public-Key
-* Public-Key: Is your node **Eclipse wallet address**.
+* `Public-Key`: Is your node **Eclipse wallet address**.
 
-## Export `Private-key`
-**1. Find Keypair path**
+### 2. Export `Private-key`
+
+1- Find Keypair path:
 ```bash
 solana config get
 ```
 * It gives your Keypair path like this: `~/.config/solana/id.json`
 
-**2. Export `Private-key`**
+2- Export `Private-key`:
 ```bash
 cat ~/.config/solana/id.json
 ```
-* This is your `Private-Key`, Save it.
+* The exported array is your `Private-Key`, Save it.
 
-## Import and Fund Node Wallet
-1- Import `Private-Key` into your `Backpack` wallet.
+### 3. Import and Fund Node Wallet
+* Import `Private-Key` into your `Backpack` wallet.
+* Fund it with `ETH` on `Eclipse` Network
 
-2- Fund it with `ETH` on `Eclipse` Network
-
-## 
+## Install 
