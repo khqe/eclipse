@@ -40,6 +40,15 @@ curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev 
 ```
 solana version
 ```
+* If you get `solana: command not found` RUN :
+```bash
+echo 'export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+```
+solana --version
+```
+
 **4. Switch RPC**
 ```bash
 solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
