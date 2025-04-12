@@ -50,5 +50,9 @@ cat ~/.config/solana/id.json
 ```
 * This is your `Private-Key`, Save it.
 
+## Import and Fund Node Wallet
+1- Import `Private-Key` into your `Backpack` wallet.
 
+2- Fund it with `ETH` on `Eclipse` Network
 
+## 
