@@ -38,4 +38,17 @@ solana-keygen new
 * Public-Key: Is your node **Eclipse wallet address**.
 
 ## Export `Private-key`
-```bas
+**1. Find Keypair path**
+```bash
+solana config get
+```
+* It gives your Keypair path like this: `~/.config/solana/id.json`
+
+**2. Export `Private-key`**
+```bash
+cat ~/.config/solana/id.json
+```
+* This is your `Private-Key`, Save it.
+
+
+
