@@ -11,6 +11,7 @@
 # Setup Guide
 ## Presequities
 - Eclipse wallet (.eg `Backpack`) funded with ETH
+- A minimal CPU system or VPS, [Guide to buy and setup a VPS](https://github.com/0xmoei/Linux_Node_Guide).
 - Linux Ubuntu Terminal
 - Windows users: Must install Linux Ubuntu Terminal using WSL. **[Guide](https://github.com/0xmoei/Install-Linux-on-Windows)**
 
